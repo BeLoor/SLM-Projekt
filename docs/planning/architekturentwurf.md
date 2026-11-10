@@ -21,7 +21,7 @@ Es wird versucht, auf detaillierte Entscheidungen zu verzichten. Erste Annahmen 
 ### Rohdaten
 Zeitungsseiten als PDF-Dateien (eingescannt durch Dirk)
 
-### Texterkennung
+### Texterkennung (OCR)
 Erkennt maschinenlesbaren Text aus den PDF-Dateien und zerlegt ihn in einzelne Artikel.
 
 ### Aufbereitung / Indexierung
