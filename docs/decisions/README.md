@@ -52,5 +52,5 @@ Ein angenommenes ADR wird inhaltlich nicht mehr verändert. Erlaubt sind nur Kor
 
 | Nr. | Titel | Status | Datum |
 | --- | --- | --- | --- |
-| [000](000-adrs-verwenden.md) | Dokumentation für Architekturentscheidungen | proposed | 2026-11-10 |
-| [001](001-rag-statt-fine-tuning.md) | RAG statt Fine-Tuning | in Arbeit | |
+| [000](000-adrs-verwenden.md) | Dokumentation für Architekturentscheidungen | accepted | 2026-11-12 |
+| [001](001-rag-statt-fine-tuning.md) | RAG statt Fine-Tuning | proposed | 2026-11-12 |

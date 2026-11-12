@@ -1,6 +1,6 @@
 ---
-status: proposed
-date: 2026-11-10
+status: accepted
+date: 2026-11-12
 decision-makers: BeLoor, Mytery676767
 consulted: BeLoor, Mytery676767
 informed: BeLoor, Mytery676767
