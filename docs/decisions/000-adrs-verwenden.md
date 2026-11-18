@@ -1,9 +1,9 @@
 ---
 status: accepted
 date: 2026-11-12
-decision-makers: BeLoor, Mytery676767
-consulted: BeLoor, Mytery676767
-informed: BeLoor, Mytery676767
+decision-makers: BeLoor, Mystery676767
+consulted: BeLoor, Mystery676767
+informed: BeLoor, Mystery676767
 ---
 
 # Dokumentation für Architekturentscheidungen
