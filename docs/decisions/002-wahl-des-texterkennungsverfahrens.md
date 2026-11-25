@@ -63,40 +63,58 @@ Gewählte Option: "{Titel von Option 1}", weil {Begründung, z. B. einzige Optio
 
 Der Text wird direkt aus dem Textlayer gelesen, der beim Scannen erzeugt wurde. Kein zusätzlicher Verarbeitungsschritt.
 
-* Gut, weil {Argument}
-* Schlecht, weil {Argument}
+* Gut, weil kein zusätzlicher maschineller Ressourcenaufwand
+* Schlecht, weil große Teile des Textes sind nicht auslesbar
+* Schlecht, weil Indizierung und Drehen von Seiten muss manuell erfolgen
 
 ### Neu-OCR mit Tesseract inklusive Drehkorrektur
 
 Alle Seiten werden als Bild gerendert (z. B. 300 dpi, Graustufen) und mit Tesseract (`-l deu`) neu erkannt. Vorher wird die Ausrichtung je Seite per Tesseract-OSD erkannt und korrigiert.
 
-* Gut, weil {Argument}
-* Schlecht, weil {Argument}
+* Gut, weil Überarbeiten der Daten kann automatisiert werden.
+* Gut, weil hohe Quote an richtig erkannten Worten.
+* Schlecht, weil alle PDF-Files noch einmal in PNG-Dateien umgewandelt werden müssen.
+* Schlecht, weil PNG-Dateien auf Ausrichtung geprüft werden müssen.
 
 ### OCR mit vorgeschalteter Layout-Erkennung
 
 Ein Werkzeug zur Dokumentanalyse (z. B. Docling oder Surya) erkennt zuerst Spalten, Überschriften und Bildunterschriften. Danach wird jeder Bereich einzeln erkannt. Das kann auch beim Zerlegen der Seiten in einzelne Artikel helfen.
 
-* Gut, weil {Argument}
-* Schlecht, weil {Argument}
+* Gut, weil Informationen direkt im MD-Format gespeichert werden.
+* Schlecht, weil kann quer liegende Seiten schlecht verarbeiten
+* Schlecht, weil kann mit besonderen Schriftarten nicht gut umgehen.
+
+### NeuOCR mit vorgeschalteter Layout-Erkennung
+Durch die Kombination der Stärken von Tesseract und einem weiteren Werkzeug zur Dokumentenanalyse wird das PDF mit Tesseract neu eingescannt und dann weiter in ein verarbeitbares MD-Dokument überführt.
+
+* Gut, weil Vorteile von neu OCR und OCR verbunden werden
+* Schlecht, weil die Arbeitsschritte beider Methoden nötig sind
+
 
 ### Vision-Language-Modell liest die Seitenbilder
 
 Ein multimodales Modell bekommt das Seitenbild und gibt den Text strukturiert aus, z. B. getrennt nach Artikeln. Mehrere Kandidaten für das Basismodell sind multimodal und kämen dafür in Frage.
 
-* Gut, weil {Argument}
-* Schlecht, weil {Argument}
+* Gut, weil automatische Korrektur von kleinen Fehlern
+* Gut, weil keine Vorverarbeitung nötig ist
+* Gut, weil Aufgabenlösung durch Prompts gezielt gesteuert werden kann
+* Schlecht, weil hoher Rechenaufwand
+* Schlecht, weil Haluzinmationsgefahr
+* Schlecht, weil begrenzte Auflösung 
 
 ### Cloud-OCR-Dienst
 
-Die Seiten werden an einen kommerziellen Dienst zur Dokumentenerkennung geschickt (z. B. Google Document AI oder Azure AI Document Intelligence). Zu prüfen ist, ob das wegen des Urheberrechts an den Artikeln überhaupt zulässig ist.
+Die Seiten werden an einen kommerziellen Dienst zur Dokumentenerkennung geschickt (z. B. Google Document AI oder Azure AI Document Intelligence). 
 
-* Gut, weil {Argument}
-* Schlecht, weil {Argument}
+* Gut, weil vorteile von VLM
+* Gut, weil rechenaufwandt nicht bei uns
+* Schlecht, weil kosten können anfallen
+* Schlecht, weil kann haluzinieren
+* Schlecht, weil begrenzte Auflösung
 
 
 ## Weitere Informationen
 
-{Hier können zusätzliche Belege für das Ergebnis der Entscheidung oder die Zustimmung des Teams dokumentiert werden. Außerdem kann festgehalten werden, wann und wie die Entscheidung umgesetzt werden soll und ob bzw. wann sie erneut geprüft werden soll. Auch Links zu anderen Entscheidungen und Ressourcen können hier stehen.}
+Sollten nachträglich größere Probleme mit der gewählten Methode auftreten, kann diese noch naträglich geändert werden. 
 
 ### Quellen
